@@ -1,0 +1,16 @@
+body{
+background-image: url("longscrolling-1.png");
+background-color: yellow;
+
+}
+
+
+
+#canvas{
+  height: 10000px;
+  border: 1px solid red;
+  background-image: url("longscrolling-1.png");
+
+
+
+}
