@@ -23,5 +23,57 @@
 
   </div>
 
+  <script id="javascript">
+  var canvas = document.getElementById("canvas");
+  var counter = document.getElementById("counter");
+  var icon = document.getElementById("icon");
+  var creature = document. getElementById("icon");
+
+  window.onscroll = function(){
+
+
+    var y = window.pageYOffset;
+
+    console.log(y);
+
+    counter.style.top = 400 + y * .97 + "px";
+
+    counter.innerHTML = y + "px";
+
+    if (y > 2000) {
+      counter.style.backgroundColor = "green";
+    }else{
+      counter.style.backgroundColor = "blue";}
+
+      icon.style.top = 200 + y  + "px";
+
+    if(y > 2000){
+
+        icon.src="whaleleft.png";
+
+    }else{
+
+    icon.src="whaleright.png";
+   }
+
+
+   creature.style.left = 2 * y - 2000 + "px";
+
+   if(y > 800){
+        img.src="octopus.png";
+    }else {
+      img.src="octopus.png";
+    }
+
+
+  };
+  </script>
+
+  <script src="js/vendor/jquery.js"></script>
+  <script src="js/vendor/what-input.js"></script>
+  <script src="js/vendor/foundation.js"></script>
+  <script src="js/app.js"></script>
+
+
 </body>
 </html>
