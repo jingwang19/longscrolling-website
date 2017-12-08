@@ -1,53 +1,227 @@
 body{
-background-image: url("longscrolling-1.png");
-background-color: yellow;
+  width: 1200px;
+  height: 3000vh;
+  background-color: ;
+  margin: 0 auto;
 
+}
+
+header{
+  width: 1200px;
+  height: 330px;
+  background-color: white;
+  background-repeat: no-repeat;
+  margin: 0 auto;
 }
 
 
 
 
 
-#canvas{
+
+.rain{
+  height: 3000vh;
+
+
+  background: url(waterbubble.png);
+  animation: rain 120s linear infinite;
+  animation-fill-mode:both;
+  background-repeat: repeat;
+  }
+
+.rain{
+  -webkit-animation-direction: reverse;
+}
+
+.rain:before{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  /*animation: lighting 3.5s linear infinite;*/
+  opacity: 0;
+
+
+}
+
+
+@keyframes rain
+ {
+   0
+   {
+     background-position: 0 0;
+   }
+   25%
+   {
+     background-position: 0% 15%;
+   }
+   50%
+   {
+     background-position: 0% 35%;
+   }
+   75%
+   {
+     background-position: 0% 50%;
+   }
+   100%
+   {
+     background-position: 0% 70%;
+   }
+
+
+}
+
+/*#canvas{
   border:2px solid red;
   width:400px;
   height:10000px;
   margin:0 auto;
   position:relative;
 
-}
+}*/
 
 #counter{
-  border:2px solid blue;
-  background-color:blue;
+  background-image: url(aterbubble.png);
+  background-color: #AFEEEE;
   color:white;
-  width:200px;
-  height:30px;
+  width:1200px;
+  height:3000px;
   top:123px;
-  left:90px;
   position:absolute;
   z-index:-1;
   opacity:0.9;
+  background-repeat:repeat;
+  margin: 0 auto;
 }
 
-h1{  border:2px solid blue;
-     background-color:yellow;
+h1{
+     background-color:;
      position:absolute;
      width:200px;
      height:30px;
      top:120px;
      left:100px;
      z-index:-2;
-     opacity:0.9;
+
 }
 
 #icon {width:300px;
-  border:1px solid black;
+
   position:absolute;
   top:200px;
   left:50px;
 }
 
+#octopus,#octopus2{
+  width: 300px;
+  position: absolute;
+  z-index: 9999;
+  top: 200px;
+  left: 50px;
+  visibility:
+
+}
+
+img, #icon{
+  width: 300px;
+  height: auto;
+  margin: 0 auto;
+  margin-left: 550px;
+}
+
+
+---------------------
+img, #waves{
+  width: 1200px;
+  height: 500px;
+  margin: 0 auto;
+  margin-top: 0px;
+  animation: bounce 1s infinite alternate;
+  -webkit-animation: bounce 1s infinite alternate;
+
+}
+@keyframes bounce {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-35px);
+  }
+}
+@-webkit-keyframes bounce {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-35px);
+  }
+}
+
+p.left{
+  color: black;
+  width: 600px;
+  height: 120px;
+  background-color: #82B3C8;
+  z-index: 200000px;
+  float: left;
+  font-size: 22px;
+}
+
+p.right{
+  color: black;
+  width: 600px;
+  height: 120px;
+  background-color: #82B3C8;
+  z-index: 200000px;
+  float: left;
+  font-size: 22px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #f1f1f1;
+    border: 1px solid #555;
+}
+
+li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+li {
+    text-align: center;
+    border-bottom: 1px solid #555;
+}
+
+li:last-child {
+    border-bottom: none;
+}
+
+li a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+li a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+}
+
+p{
+  background-color: #AFEEEE;
+  width: 500px;
+  height: 150px;
+  margin: 0 auto;
+  word-spacing: .2em;
+  padding-top: 20px;
+  margin-top: 100px;
+}
 
 /* relative, absolute, fixed, static
 http://www.barelyfitz.com/screencast/html-training/css/positioning/

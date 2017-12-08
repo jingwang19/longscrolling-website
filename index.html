@@ -4,30 +4,68 @@
 <meta name="description" content="demo">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="css/foundation.css">
   <link rel="stylesheet" href="style.css">
   <title>Jing Wang's Long Scrolling Website</title>
 </head>
 
 
+<header>
 
+
+<nav class="nav-bar">
+  <ul>
+    <li><a href="index.html">Sea World</a></li>
+    <li><a href="about.html">About</a></li>
+  </ul>
+</nav>
+
+
+
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<img src="waves.png" alt="" id="waves">
+</header>
 
 
 <body>
 
-  <div id="canvas"> <img src="whale.png">
+        <img src=""id="octopus" alt="">
 
-    <div id="counter">counter</div>
-    <h1>Hello</h1>
+          <img src=""id="octopus2" alt="">
 
-    <img src="" alt="" id="icon">
 
-  </div>
+              <div id="counter">counter</div>
+
+
+              <img src="" alt="" id="icon">
+
+
+
+          <div class="rain"></div>
+          <div class="waves"></div>
+
+
+
+
+
+
 
   <script id="javascript">
   var canvas = document.getElementById("canvas");
   var counter = document.getElementById("counter");
   var icon = document.getElementById("icon");
-  var creature = document. getElementById("icon");
+  var octopus = document.getElementById("octopus");
+  var octopus2 = document.getElementById("octopus2");
+  var waves = document.getElementById("waves");
+
+
 
   window.onscroll = function(){
 
@@ -36,34 +74,66 @@
 
     console.log(y);
 
-    counter.style.top = 400 + y * .97 + "px";
+    counter.style.top = 0 + y * .97 + "px";
 
     counter.innerHTML = y + "px";
 
     if (y > 2000) {
-      counter.style.backgroundColor = "green";
+      counter.style.backgroundColor = "#0E5381";
     }else{
-      counter.style.backgroundColor = "blue";}
+      counter.style.backgroundColor = "#AFEEEE";}
 
       icon.style.top = 200 + y  + "px";
 
-    if(y > 2000){
+      if(y > 2000 ){
 
-        icon.src="whaleleft.png";
+          icon.src="whaleleft.png";
 
-    }else{
+      }else if (y < 380 ) {
+        icon.src="";
+      } else {
 
-    icon.src="whaleright.png";
-   }
+      icon.src="whaleright.png";
+     }
+
+<!-- begin moving octopus -->
+
+     if(y > -300 && y < 30000 ){
+
+       octopus.style.left = 3 * y - 2000 + "px";
+
+          octopus.src="octopus.png";
+      }else {
+        octopus.style.left = "-500px";
+
+        octopus.src="octopus.png";
+      }
+
+      octopus.style.top = 120 + y + "px";
 
 
-   creature.style.left = 2 * y - 2000 + "px";
+<!-- end moving octopus -->
 
-   if(y > 800){
-        img.src="octopus.png";
-    }else {
-      img.src="octopus.png";
-    }
+<!-- begin moving octopus -->
+
+     if(y > -300 && y < 30000 ){
+
+       octopus2.style.left = -3.2 * y + 2600 + "px";
+
+          octopus2.src="octopus2.png";
+      }else {
+        octopus2.style.left = "-500px";
+
+        octopus2.src="octopus2.png";
+      }
+
+      octopus2.style.top = 600 + y + "px";
+
+
+
+<!-- end moving octopus -->
+
+
 
 
   };
